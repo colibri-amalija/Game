@@ -1,4 +1,6 @@
 <?php
+$n = 112345678;
+session_start();
 
 require 'vendor/autoload.php';
 require "connection.php";
@@ -15,3 +17,7 @@ $clicker->on('click',function($clicker) {
     $clicker->set("Test");
     $clicker->js()->reload();
   });
+
+  $label = $col_2->add(["Button",$_SESSION['test']]);
+
+  $save = $col_2->add(["Button","save","blue big"]);
