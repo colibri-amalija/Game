@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION["test"] = "112345678";
 
 require 'vendor/autoload.php';
 require "connection.php";
@@ -9,7 +10,7 @@ $app = new \atk4\ui\App("Amalia");
 $app->initLayout('Centered');
 
 $form = $app->layout->add('Form');
-$form->setModel(new User($db));
+$form->setModel(new User($db),['nickname','name','surname','email','password']);
 $form->buttonSave->set("Continueeee");
 $model = new User($db);
 
