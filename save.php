@@ -6,4 +6,4 @@ $save = new User ($db);
 $save->load($_SESSION['user_id']);
   $save['clicker_count'] = $_GET['val'];
   $save->save();
-  echo "<script>window.close();</script";
+  echo "<script>window.close();</script>";

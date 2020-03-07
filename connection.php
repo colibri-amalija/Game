@@ -8,7 +8,7 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
 
 
 class User extends \atk4\data\Model {
-    public $table = 'user_smile789';
+    public $table = 'user_smile789 ';
     function init() {
         parent::init();
         $this->addField("nickname",["required"=>TRUE]);
